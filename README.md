@@ -1,7 +1,7 @@
 # Foundry VTT APSJ Journal Styles
 
-![Latest Version](https://img.shields.io/badge/dynamic/json.svg?url=https%3A%2F%2Ffiledn.eu%2Fll0ok7wvVCBXqoCCUxvRpum%2Fapsj-styles%2Fmodule.json&label=Latest%20Release&prefix=v&query=$.version&colorB=red&style=for-the-badge)
-![Foundry Core Compatible Version](https://img.shields.io/badge/dynamic/json.svg?url=https%3A%2F%2Ffiledn.eu%2Fll0ok7wvVCBXqoCCUxvRpum%2Fapsj-styles%2Fmodule.json&label=Foundry%20Version&query=$.compatibleCoreVersion&colorB=orange&style=for-the-badge)
+![Latest Version](https://img.shields.io/badge/dynamic/json.svg?url=https%3A%2F%2Fgithub.com%2Fturthalion%2Fapsj-styles%2Freleases%2Flatest%2Fdownload%2Fmodule.json&label=Latest%20Release&prefix=v&query=$.version&colorB=red&style=for-the-badge)
+![Foundry Core Compatible Version](https://img.shields.io/badge/dynamic/json.svg?url=https%3A%2F%2Fgithub.com%2Fturthalion%2Fapsj-styles%2Freleases%2Flatest%2Fdownload%2Fmodule.json&label=Foundry%20Version&query=$.compatibleCoreVersion&colorB=orange&style=for-the-badge)
 
 ## Installation
 
@@ -9,7 +9,7 @@
 
 You can now install this module automatically by specifying the following public module URL : 
 
-`https://https://filedn.eu/ll0ok7wvVCBXqoCCUxvRpum/apsj-styles/module.json`
+`https://github.com/turthalion/apsj-styles/releases/latest/download/module.json`
 
 As GM go to the **Manage Modules** options menu in your **World Settings** tab then enable the **APSJ Styles** module.
 
