@@ -1,5 +1,13 @@
 import { APSJFontHelper } from "./font-helper.js"
 
+export let i18n = key => {
+    return game.i18n.localize(key);
+};
+export let format = (key, data = {}) => {
+    return game.i18n.format(key, data);
+};
+export let log = (...args) => console.log("apsj-styles | ", ...args);
+
 export class APSJ {
     static blockList = [
         'black',

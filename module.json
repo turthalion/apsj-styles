@@ -2,41 +2,44 @@
   "id": "apsj-styles",
   "title": "APSJ Styles",
   "description": "APSJ‑specific classes and styles extracted from Monks Enhanced Journal.",
-  "version": "0.2.1",
-  "esmodules": ["scripts/insertStyles.js"],
-  "styles": ["styles/apsj.css"],
-  "templates": [
-    "templates/block.html",
-    "templates/card.html",
-    "templates/dialog.html",
-    "templates/encounter.html",
-    "templates/panel.html",
-    "templates/read-aloud.html",
-    "templates/readAloud.html",
-    "templates/scroll.html"
+  "version": "0.0.0",
+  "esmodules": [
+    "scripts/insertStyles.js"
+  ],
+  "styles": [
+    {
+      "src": "styles/apsj.css"
+    }
   ],
   "compatibility": {
     "minimum": "12",
     "verified": "13"
   },
   "authors": [
-    { "name": "Michael J. Coyne", "email": "turthalion@gmail.com" }
+    {
+      "name": "Michael J. Coyne",
+      "email": "turthalion@gmail.com",
+      "flags": {}
+    }
   ],
   "languages": [
     {
       "lang": "en",
       "name": "English",
-      "path": "lang/en.json"
+      "path": "lang/en.json",
+      "flags": {}
     },
     {
       "lang": "it",
       "name": "Italiano",
-      "path": "lang/it.json"
+      "path": "lang/it.json",
+      "flags": {}
     },
     {
       "lang": "fr",
       "name": "Français",
-      "path": "lang/fr.json"
+      "path": "lang/fr.json",
+      "flags": {}
     }
   ],
   "url": "https://github.com/turthalion/apsj-styles",
