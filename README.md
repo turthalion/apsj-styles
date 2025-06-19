@@ -14,14 +14,3 @@ You can now install this module automatically by specifying the following public
 As GM go to the **Manage Modules** options menu in your **World Settings** tab then enable the **APSJ Styles** module.
 
 This module adds the APSJ Styles from Monk's Enhanced Journal back into the system in a v13 friendly way.
-
-## Revision History
-
-V0.2.1
-- First github release
-
-V0.2.0
-- First master release
-
-V0.1.0
-- Initial release
