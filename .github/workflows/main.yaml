@@ -11,9 +11,9 @@ jobs:
       # Checkout
       - uses: actions/checkout@v2
       # install deps
-      - run: npm ci
+      #- run: npm ci
       # pack packs
-      - run: npm run build
+      #- run: npm run build
 
       # Substitute the Manifest and Download URLs in the module.json
       - name: Substitute Manifest and Download Links For Versioned Ones
