@@ -76,6 +76,70 @@
     --apsj-btn-background: linear-gradient(rgb(var(--apsj-light-5)), rgb(var(--apsj-light-2)), rgb(var(--apsj-light-5)));
 }
 
+:root[apsj-theme] {
+    --apsj-primary-bright: rgb(var(--apsj-primary-color-bright));
+    --apsj-primary-light: rgb(var(--apsj-primary-color-light));
+    --apsj-primary: rgb(var(--apsj-primary-color));
+    --apsj-primary-dark: rgb(var(--apsj-primary-color-dark));
+    --apsj-primary-75: rgba(var(--apsj-primary-color), 0.75);
+}
+
+:root[apsj-theme='red'] {
+    --apsj-primary-color: 160, 0, 0;
+    --apsj-primary-color-light: 200, 40, 40;
+    --apsj-primary-color-dark: 120, 0, 0;
+    --apsj-primary-color-bright: 231, 191, 191;
+}
+
+:root[apsj-theme='orange'] {
+    --apsj-primary-color: 255, 128, 0;
+    --apsj-primary-color-light: 255, 168, 40;
+    --apsj-primary-color-dark: 215, 88, 0;
+    --apsj-primary-color-bright: 255, 223, 191;
+}
+
+:root[apsj-theme='yellow'] {
+    --apsj-primary-color: 215, 215, 0;
+    --apsj-primary-color-light: 255, 255, 40;
+    --apsj-primary-color-dark: 175, 175, 0;
+    --apsj-primary-color-bright: 245, 245, 191;
+}
+
+:root[apsj-theme='green'] {
+    --apsj-primary-color: 0, 128, 0;
+    --apsj-primary-color-light: 40, 188, 40;
+    --apsj-primary-color-dark: 0, 88, 0;
+    --apsj-primary-color-bright: 191, 223, 191;
+}
+
+:root[apsj-theme='cyan'] {
+    --apsj-primary-color: 0, 255, 255;
+    --apsj-primary-color-light: 60, 255, 255;
+    --apsj-primary-color-dark: 0, 195, 195;
+    --apsj-primary-color-bright: 191, 255, 255;
+}
+
+:root[apsj-theme='blue'] {
+    --apsj-primary-color: 1, 86, 255;
+    --apsj-primary-color-light: 41, 126, 255;
+    --apsj-primary-color-dark: 0, 46, 215;
+    --apsj-primary-color-bright: 191, 213, 255;
+}
+
+:root[apsj-theme='purple'] {
+    --apsj-primary-color: 104, 25, 193;
+    --apsj-primary-color-light: 144, 65, 233;
+    --apsj-primary-color-dark: 64, 0, 153;
+    --apsj-primary-color-bright: 217, 197, 239;
+}
+
+:root[apsj-theme='black'] {
+    --apsj-primary-color: 32, 32, 32;
+    --apsj-primary-color-light: 64, 64, 64;
+    --apsj-primary-color-dark: 0, 0, 0;
+    --apsj-primary-color-bright: 96, 96, 96;
+}
+
 /**
 * Core Style Overrides
 **/

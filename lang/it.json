@@ -3,8 +3,8 @@
   "APSJournal.background-image.hint": "Sostituisci background predefinito",
   "APSJournal.background-colour.name": "Colore di Background",
   "APSJournal.background-colour.hint": "Cambia il colore del diario migliorato",
-  "APSJournal.sidebar-image.name": "Immagine menu barra laterale",
-  "APSJournal.sidebar-image.hint": "Sostituisci background predefinito",
+  "APSJournal.apsj-theme.name": "Tema Stili APSJ",
+  "APSJournal.apsj-theme.hint": "Scegli il tema predefinito per i blocchi e i pannelli degli stili APSJ",
 
   "APSJournal.color-theme.name": "Colore del Tema",
   "APSJournal.color-theme-none.name": "Nessuno",

@@ -4,6 +4,7 @@
   "description": "APSJ‑specific classes and styles extracted from Monks Enhanced Journal.",
   "version": "0.0.0",
   "esmodules": [
+    "apsjournal.js",
     "scripts/insertStyles.js"
   ],
   "styles": [

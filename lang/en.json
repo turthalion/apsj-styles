@@ -3,8 +3,8 @@
   "APSJournal.background-image.hint": "Replace the default background",
   "APSJournal.background-colour.name": "Background Colour",
   "APSJournal.background-colour.hint": "Change the colour of the enhanced journal",
-  "APSJournal.sidebar-image.name": "Sidebar Menu Image",
-  "APSJournal.sidebar-image.hint": "Replace the default background",
+  "APSJournal.apsj-theme.name": "APSJ Styles Theme",
+  "APSJournal.apsj-theme.hint": "Choose the default theme for APSJ styles blocks and panels",
 
   "APSJournal.color-theme.name": "Color Theme",
   "APSJournal.color-theme-none.name": "None",

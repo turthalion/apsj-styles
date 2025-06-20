@@ -6,6 +6,35 @@ export let format = (key, data = {}) => {
 };
 export let log = (...args) => console.log("apsj-styles | ", ...args);
 
+export const registerSettings = function () {
+  // Register any custom module settings here
+  let modulename = "apsj-styles";
+
+  let apsjThemes = {
+    'none': i18n('APSJournal.color-theme-none.name'),
+    'blue':  i18n('APSJournal.color-theme-blue.name'),
+    'cyan':  i18n('APSJournal.color-theme-cyan.name'),
+    'green':  i18n('APSJournal.color-theme-green.name'),
+    'orange':  i18n('APSJournal.color-theme-orange.name'),
+    'purple':  i18n('APSJournal.color-theme-purple.name'),
+    'red': i18n('APSJournal.color-theme-red.name'),
+    'yellow':  i18n('APSJournal.color-theme-yellow.name')
+  };
+
+  game.settings.register(modulename, 'apsj-theme', {
+    name: i18n('APSJournal.apsj-theme.name'),
+    hint: i18n('APSJournal.apsj-theme.hint'),
+    scope: 'client',
+    config: true,
+    default: "none",
+    choices: apsjThemes,
+    type: String,
+    onChange: (value) => {
+      document.documentElement.setAttribute("apsj-theme", value);
+    },
+  });
+}
+
 export class APSJ {
     static blockList = [
         'black',
@@ -48,6 +77,11 @@ export class APSJ {
     ];
 
     static async init() {
+        log('Initializing apsj-styles');
+        registerSettings();
+        const value = game.settings.get("apsj-styles", "apsj-theme");
+        document.documentElement.setAttribute("apsj-theme", value);
+
         CONFIG.TinyMCE.content_css.push(
             'modules/apsj-styles/css/apsjournal.css'
         );
@@ -132,12 +166,22 @@ export class APSJ {
     }
 
     /**
+     * Change to the selected theme in local storage
+     **/
+    static setTheme(theme) {
+        if (theme == 'none')
+            document.documentElement.removeAttribute('apsj-theme');
+        else
+            document.documentElement.setAttribute('apsj-theme', theme);
+    }
+
+    /**
      * Define HTML Elements for Blocks
      **/
 
     static async getBlock(colour) {
         if (['card', 'scroll', 'encounter', 'read-aloud'].includes(colour)) {
-            let content = await renderTemplate(
+            let content = await foundry.applications.handlebars.renderTemplate(
                 `modules/apsj-styles/templates/${colour}.html`
             );
             return content;
@@ -149,7 +193,7 @@ export class APSJ {
                 body: i18n(`APSJournal.block-${colour}.body`),
             };
 
-            let content = await renderTemplate(
+            let content = await foundry.applications.handlebars.renderTemplate(
                 'modules/apsj-styles/templates/block.html',
                 data
             );
@@ -330,3 +374,8 @@ export class APSJMenu extends ProseMirror.ProseMirrorMenu {
         return menus;
     }
 }
+
+Hooks.once("init", async function () {
+    APSJ.init();
+});
+

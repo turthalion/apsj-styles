@@ -5,6 +5,8 @@
   "APSJournal.background-colour.hint": "Changer la couleur de fond de l'enhanced journal",
   "APSJournal.sidebar-image.name": "Image de la barre de menu",
   "APSJournal.sidebar-image.hint": "Remplacer le fond par défaut",
+  "APSJournal.apsj-theme.name": "Thème Styles APSJ",
+  "APSJournal.apsj-theme.hint": "Choisissez le thème par défaut pour les blocs et panneaux de styles APSJ",
 
   "APSJournal.color-theme.name": "Couleur du thème",
   "APSJournal.color-theme-none.name": "Aucun",

@@ -1,6 +1,7 @@
-# Unreleased
+# Version 0.2.3
 
 Remove font support
+Add theme choice support for default read-aloud blocks
 
 # Version 0.2.2
 
