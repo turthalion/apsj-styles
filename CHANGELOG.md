@@ -1,3 +1,7 @@
+# Unreleased
+
+Remove font support
+
 # Version 0.2.2
 
 Github workflow release.

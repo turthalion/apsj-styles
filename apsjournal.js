@@ -1,5 +1,3 @@
-import { APSJFontHelper } from "./font-helper.js"
-
 export let i18n = key => {
     return game.i18n.localize(key);
 };
@@ -50,7 +48,6 @@ export class APSJ {
     ];
 
     static async init() {
-        APSJournalFontHelper.loadFonts();
         CONFIG.TinyMCE.content_css.push(
             'modules/apsj-styles/css/apsjournal.css'
         );
