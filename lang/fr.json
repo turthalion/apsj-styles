@@ -9,13 +9,13 @@
   "APSJournal.apsj-theme.hint": "Choisissez le thème par défaut pour les blocs et panneaux de styles APSJ",
 
   "APSJournal.color-theme.name": "Couleur du thème",
-  "APSJournal.color-theme-none.name": "Aucun",
+  "APSJournal.color-theme-none.name": "Aucun (défaut)",
   "APSJournal.color-theme-blue.name": "Bleu",
   "APSJournal.color-theme-cyan.name": "Cyan",
   "APSJournal.color-theme-green.name": "Vert",
   "APSJournal.color-theme-orange.name": "Orange",
   "APSJournal.color-theme-purple.name": "Violet",
-  "APSJournal.color-theme-red.name": "Rouge (Défaut)",
+  "APSJournal.color-theme-red.name": "Rouge",
   "APSJournal.color-theme-yellow.name": "Jaune",
 
   "APSJournal.stylish-menu.name": "Stylisé",

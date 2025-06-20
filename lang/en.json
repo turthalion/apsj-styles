@@ -7,13 +7,13 @@
   "APSJournal.apsj-theme.hint": "Choose the default theme for APSJ styles blocks and panels",
 
   "APSJournal.color-theme.name": "Color Theme",
-  "APSJournal.color-theme-none.name": "None",
+  "APSJournal.color-theme-none.name": "None (default)",
   "APSJournal.color-theme-blue.name": "Blue",
   "APSJournal.color-theme-cyan.name": "Cyan",
   "APSJournal.color-theme-green.name": "Green",
   "APSJournal.color-theme-orange.name": "Orange",
   "APSJournal.color-theme-purple.name": "Purple",
-  "APSJournal.color-theme-red.name": "Red (Default)",
+  "APSJournal.color-theme-red.name": "Red",
   "APSJournal.color-theme-yellow.name": "Yellow",
 
   "APSJournal.stylish-menu.name": "Stylish",

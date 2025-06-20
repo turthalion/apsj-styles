@@ -7,13 +7,13 @@
   "APSJournal.apsj-theme.hint": "Scegli il tema predefinito per i blocchi e i pannelli degli stili APSJ",
 
   "APSJournal.color-theme.name": "Colore del Tema",
-  "APSJournal.color-theme-none.name": "Nessuno",
+  "APSJournal.color-theme-none.name": "Nessuno (predefinito)",
   "APSJournal.color-theme-blue.name": "Blu",
   "APSJournal.color-theme-cyan.name": "Azzurro",
   "APSJournal.color-theme-green.name": "Verde",
   "APSJournal.color-theme-orange.name": "Arancione",
   "APSJournal.color-theme-purple.name": "Viola",
-  "APSJournal.color-theme-red.name": "Rosso (Predefinito)",
+  "APSJournal.color-theme-red.name": "Rosso",
   "APSJournal.color-theme-yellow.name": "Giallo",
 
   "APSJournal.stylish-menu.name": "Stylish",
