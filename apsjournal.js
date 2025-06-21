@@ -81,36 +81,42 @@ export class APSJ {
         registerSettings();
         const value = game.settings.get("apsj-styles", "apsj-theme");
         document.documentElement.setAttribute("apsj-theme", value);
+    }
+
+    static async ready() {
+        console.log("APSJ ready: translations are now available");
+
+        CONFIG.TinyMCE.style_formats ??= []; // safe guard
 
         CONFIG.TinyMCE.content_css.push(
-            'modules/apsj-styles/css/apsjournal.css'
+            'modules/apsj-styles/styles/apsj.css'
         );
 
         CONFIG.TinyMCE.style_formats.push({
-            title: game.i18n.format('APSJournal.stylish-text-menu.name'),
+            title: i18n('APSJournal.stylish-text-menu.name'),
             items: [
                 {
-                    title: game.i18n.format('APSJournal.text-heading-title.name'),
+                    title: i18n('APSJournal.text-heading-title.name'),
                     selector: 'h1,h2,h3,h4,h5,h6,th,td,p',
                     classes: 'apsj-title',
                 },
                 {
-                    title: game.i18n.format('APSJournal.text-heading.name'),
+                    title: i18n('APSJournal.text-heading.name'),
                     selector: 'h1,h2,h3,h4,h5,h6,th,td,p',
                     classes: 'apsj-heading',
                 },
                 {
-                    title: game.i18n.format('APSJournal.text-data-heading.name'),
+                    title: i18n('APSJournal.text-data-heading.name'),
                     selector: 'h1,h2,h3,h4,h5,h6,th,td,p',
                     classes: 'apsj-data-heading',
                 },
                 {
-                    title: game.i18n.format('APSJournal.text-data.name'),
+                    title: i18n('APSJournal.text-data.name'),
                     selector: 'h1,h2,h3,h4,h5,h6,th,td,p',
                     classes: 'apsj-data',
                 },
                 {
-                    title: game.i18n.format('APSJournal.text-paragraph.name'),
+                    title: i18n('APSJournal.text-paragraph.name'),
                     selector: 'td,p',
                     classes: 'apsj-text',
                 },
@@ -202,7 +208,7 @@ export class APSJ {
     }
 
     static async getDialog(colour, side) {
-        let content = await renderTemplate(
+        let content = await foundry.applications.handlebars.renderTemplate(
             'modules/apsj-styles/templates/dialog.html',
             { colour, side }
         );
@@ -250,7 +256,7 @@ export class APSJ {
                 break;
         }
 
-        let content = await renderTemplate(
+        let content = await foundry.applications.handlebars.renderTemplate(
             'modules/apsj-styles/templates/panel.html',
             data
         );
@@ -282,7 +288,7 @@ export class APSJMenu extends ProseMirror.ProseMirrorMenu {
         //     children: [
         //         {
         //             action: 'stylishTitle',
-        //             title: game.i18n.format(
+        //             title: i18n(
         //                 'APSJournal.text-heading-title.name'
         //             ),
         //             priority: 1,
@@ -292,14 +298,14 @@ export class APSJMenu extends ProseMirror.ProseMirrorMenu {
         //         },
         //         {
         //             action: 'stylishHeading',
-        //             title: game.i18n.format('APSJournal.text-heading.name'),
+        //             title: i18n('APSJournal.text-heading.name'),
         //             priority: 1,
         //             style: "font-family: 'ScalySansCaps'",
         //             node: ProseMirror.defaultSchema.nodes.paragraph,
         //         },
         //         {
         //             action: 'stylishDataHeading',
-        //             title: game.i18n.format(
+        //             title: i18n(
         //                 'APSJournal.text-data-heading.name'
         //             ),
         //             priority: 1,
@@ -308,14 +314,14 @@ export class APSJMenu extends ProseMirror.ProseMirrorMenu {
         //         },
         //         {
         //             action: 'stylishData',
-        //             title: game.i18n.format('APSJournal.text-data.name'),
+        //             title: i18n('APSJournal.text-data.name'),
         //             priority: 1,
         //             style: "font-family: 'ScalySans'",
         //             node: ProseMirror.defaultSchema.nodes.paragraph,
         //         },
         //         {
         //             action: 'stylishParagraph',
-        //             title: game.i18n.format('APSJournal.text-paragraph.name'),
+        //             title: i18n('APSJournal.text-paragraph.name'),
         //             priority: 1,
         //             style: "font-family: 'Bookinsanity'",
         //             node: ProseMirror.defaultSchema.nodes.paragraph,
@@ -379,3 +385,6 @@ Hooks.once("init", async function () {
     APSJ.init();
 });
 
+Hooks.once("ready", async function () {
+    APSJ.ready();
+});

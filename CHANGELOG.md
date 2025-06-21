@@ -1,3 +1,8 @@
+# Version 0.2.4
+
+Fix string fetching for stylish menu (in TinyMCE).
+Register css styles properly.
+
 # Version 0.2.3
 
 Remove font support
