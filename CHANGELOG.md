@@ -2,6 +2,7 @@
 
 Improve README with examples.
 Use Foundry's built-in Font Awesome Pro instead of requiring Font Awesome Free it to be user-installed.
+Move apsj-text style back to font-weight 400 as APSJ dnd-text was, not the 700 of MEJ.
 
 # Version 0.2.5
 

@@ -36,6 +36,10 @@ _The available Blocks:_
 
 ![blocks](media/apsj-stylish-blocks.webp)
 
+_The available Elements stylings:_
+
+![blocks](media/apsj-stylish-elements.webp)
+
 _The available Elements Stylings in Prosemirror:_
 
 ![elements](media/apsj-stylish-text-menu-prosemirror.webp)

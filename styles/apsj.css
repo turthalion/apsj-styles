@@ -45,7 +45,7 @@
     --apsj-cyan-light: rgb(112, 217, 255);
     --apsj-blue-light: rgb(41, 126, 255);
     --apsj-purple-light: rgb(144, 65, 233);
-  	--apsj-black-light: rgb(64, 64, 64);
+    --apsj-black-light: rgb(64, 64, 64);
 
     --apsj-red: rgb(160, 0, 0);
     --apsj-orange: rgb(255, 128, 0);
@@ -54,7 +54,7 @@
     --apsj-cyan: rgb(72, 177, 224);
     --apsj-blue: rgb(1, 86, 255);
     --apsj-purple: rgb(104, 25, 193);
-  	--apsj-black: rgb(32, 32, 32);
+    --apsj-black: rgb(32, 32, 32);
 
     --apsj-red-dark: rgb(120, 0, 0);
     --apsj-orange-dark: rgb(215, 88, 0);
@@ -63,7 +63,7 @@
     --apsj-cyan-dark: rgb(32, 137, 184);
     --apsj-blue-dark: rgb(0, 46, 215);
     --apsj-purple-dark: rgb(64, 0, 153);
-  	--apsj-black-dark: rgb(0, 0, 0);
+    --apsj-black-dark: rgb(0, 0, 0);
 
     --apsj-font-awesome: 'Font Awesome 6 Pro';
     --apsj-font-bookinsanity: 'Bookinsanity', serif;
@@ -173,7 +173,7 @@
 
 .apsj-text {
     font-family: var(--apsj-font-bookinsanity);
-    font-weight: 700;
+    font-weight: 400;
     font-size: 1em;
 }
 
