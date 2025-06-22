@@ -28,15 +28,11 @@ Automatic font insertion seems to no longer be supported, at least not in the sa
 
 ## Media
 
-The new Text Styles can be found under the Style dropdown at the left of the toolbar in either the ProseMirror or deprecated TinyMCE editor.
+The new Text Styles can be found under the Style dropdown at the left of the toolbar in the ProseMirror editor.
 
 _The available Elements Stylings in Prosemirror:_
 
 ![elements-prosemirror](media/apsj-stylish-text-menu-prosemirror.webp)
-
-_The available Elements Stylings in TinyMCE:_
-
-![elements-tinymce](media/apsj-stylish-text-menu-tinymce.webp)
 
 _The available Panels:_
 

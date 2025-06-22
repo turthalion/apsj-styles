@@ -91,94 +91,6 @@ export class APSJ {
         document.documentElement.setAttribute("apsj-theme", value);
     }
 
-    static async ready() {
-        console.log("APSJ ready: translations are now available");
-
-        CONFIG.TinyMCE.style_formats ??= []; // safe guard
-
-        CONFIG.TinyMCE.content_css.push(
-            'modules/apsj-styles/styles/apsj.css'
-        );
-
-        CONFIG.TinyMCE.style_formats.push({
-            title: i18n('APSJournal.stylish-text-menu.name'),
-            items: [
-                {
-                    title: i18n('APSJournal.text-heading-title.name'),
-                    selector: 'h1,h2,h3,h4,h5,h6,th,td,p',
-                    classes: 'apsj-title',
-                },
-                {
-                    title: i18n('APSJournal.text-heading.name'),
-                    selector: 'h1,h2,h3,h4,h5,h6,th,td,p',
-                    classes: 'apsj-heading',
-                },
-                {
-                    title: i18n('APSJournal.text-data-heading.name'),
-                    selector: 'h1,h2,h3,h4,h5,h6,th,td,p',
-                    classes: 'apsj-data-heading',
-                },
-                {
-                    title: i18n('APSJournal.text-data.name'),
-                    selector: 'h1,h2,h3,h4,h5,h6,th,td,p',
-                    classes: 'apsj-data',
-                },
-                {
-                    title: i18n('APSJournal.text-paragraph.name'),
-                    selector: 'td,p',
-                    classes: 'apsj-text',
-                },
-            ],
-        });
-
-        CONFIG.TinyMCE.templates = (CONFIG.TinyMCE.templates || [])
-            .concat(
-                await Promise.all(
-                    APSJ.blockList.map(async (c) => {
-                        return {
-                            title: i18n(`APSJournal.block-${c}.name`),
-                            description: i18n(
-                                `APSJournal.block-${c}.description`
-                            ),
-                            content: await APSJ.getBlock(c),
-                        };
-                    })
-                )
-            )
-            .concat(
-                ...(await Promise.all(
-                    APSJ.dialogList.flatMap(async (c) => {
-                        return await Promise.all(
-                            ['left', 'right'].map(async (s) => {
-                                return {
-                                    title: i18n(
-                                        `APSJournal.block-dialogue-${c}-${s}.name`
-                                    ),
-                                    description: i18n(
-                                        'APSJournal.block-dialogue.description'
-                                    ),
-                                    content: await APSJ.getDialog(c, s),
-                                };
-                            })
-                        );
-                    })
-                ))
-            )
-            .concat(
-                await Promise.all(
-                    APSJ.panelList.map(async (c) => {
-                        return {
-                            title: i18n(`APSJournal.panel-${c}.name`),
-                            description: i18n(
-                                `APSJournal.panel-${c}.description`
-                            ),
-                            content: await APSJ.getPanel(c),
-                        };
-                    })
-                )
-            );
-    }
-
     /**
      * Change to the selected theme in local storage
      **/
@@ -290,9 +202,9 @@ function insertHTML(view, htmlString) {
 }
 
 Hooks.once("ready", async function () {
-    APSJ.ready();
     Hooks.callAll("apsjReady");
 });
+
 
 Hooks.on("getProseMirrorMenuDropDowns", (proseMirrorMenu, dropdowns) => {
   dropdowns.apsjStylish = {
