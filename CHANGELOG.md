@@ -1,3 +1,8 @@
+# latest
+
+Improve README with examples.
+Use Foundry's built-in Font Awesome Pro instead of requiring Font Awesome Free it to be user-installed.
+
 # Version 0.2.5
 
 Get stylish menu working in both TinyMCE and ProseMirror.
