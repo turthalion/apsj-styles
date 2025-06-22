@@ -281,12 +281,67 @@ Hooks.once("init", async function () {
 
 });
 
+function insertHTML(view, htmlString) {
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(htmlString, "text/html");
+  const fragment = ProseMirror.DOMParser.fromSchema(view.state.schema).parseSlice(doc.body);
+  const transaction = view.state.tr.replaceSelection(fragment);
+  view.dispatch(transaction);
+}
+
 Hooks.once("ready", async function () {
     APSJ.ready();
     Hooks.callAll("apsjReady");
 });
 
 Hooks.on("getProseMirrorMenuDropDowns", (proseMirrorMenu, dropdowns) => {
+  dropdowns.apsjStylish = {
+    title: i18n("APSJournal.stylish-menu.name"),
+    action: "stylish",
+    entries: [
+      {
+        title: "Blocks",
+        action: "blocks",
+        children: APSJ.blockList.map((c) => ({
+          title: i18n(`APSJournal.block-${c}.name`),
+          description: i18n(`APSJournal.block-${c}.description`),
+          action: `block-${c}`,
+          cmd: async () => {
+            const html = await APSJ.getBlock(c);
+            insertHTML(proseMirrorMenu.view, html);
+          },
+        })),
+      },
+      {
+        title: "Dialogues",
+        action: "dialogues",
+        children: APSJ.dialogList.flatMap((c) =>
+          ["left", "right"].map((side) => ({
+            title: i18n(`APSJournal.block-dialogue-${c}-${side}.name`),
+            description: i18n(`APSJournal.block-dialogue.description`),
+            action: `dialog-${c}-${side}`,
+            cmd: async () => {
+              const html = await APSJ.getDialog(c, side);
+              insertHTML(proseMirrorMenu.view, html);
+            },
+          }))
+        ),
+      },
+      {
+        title: "Panels",
+        action: "panels",
+        children: APSJ.panelList.map((c) => ({
+          title: i18n(`APSJournal.panel-${c}.name`),
+          description: i18n(`APSJournal.panel-${c}.description`),
+          action: `panel-${c}`,
+          cmd: async () => {
+            const html = await APSJ.getPanel(c);
+            insertHTML(proseMirrorMenu.view, html);
+          },
+        })),
+      },
+    ],
+  };
   const createStyleEntry = (key, config) => {
     const localizedText = i18n(`APSJournal.${config.text}.name`);
 
