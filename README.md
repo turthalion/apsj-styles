@@ -28,6 +28,15 @@ Automatic font insertion seems to no longer be supported, at least not in the sa
 
 ## Media
 
+The new Text Styles can be found under the Style dropdown at the left of the toolbar in either the ProseMirror or deprecated TinyMCE editor.
+_The available Elements Stylings in Prosemirror:_
+
+![elements-prosemirror](media/apsj-stylish-text-menu-prosemirror.webp)
+
+_The available Elements Stylings in TinyMCE:_
+
+![elements-tinymce](media/apsj-stylish-text-menu-tinymce.webp)
+
 _The available Panels:_
 
 ![panels](media/apsj-stylish-panels.webp)
@@ -36,17 +45,9 @@ _The available Blocks:_
 
 ![blocks](media/apsj-stylish-blocks.webp)
 
-_The available Elements stylings:_
+_The available Elements Stylings_
 
-![blocks](media/apsj-stylish-elements.webp)
-
-_The available Elements Stylings in Prosemirror:_
-
-![elements](media/apsj-stylish-text-menu-prosemirror.webp)
-
-_The available Elements Stylings in TinyMCE:_
-
-![elements](media/apsj-stylish-text-menu-tinymce.webp)
+![elements](media/apsj-stylish-elements.webp)A
 
 _An example of Mixing and Matching elements:_
 
