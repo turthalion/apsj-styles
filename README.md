@@ -48,7 +48,7 @@ _The available Blocks:_
 
 _The available Elements Stylings:_
 
-![elements](media/apsj-stylish-elements.webp)A
+![elements](media/apsj-stylish-elements.webp)
 
 _An example of Mixing and Matching elements:_
 
