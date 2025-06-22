@@ -27,3 +27,24 @@ Automatic font insertion seems to no longer be supported, at least not in the sa
 * ScalySans
 * ScalySansCaps
 
+## Media
+
+![panels](media/apsj-stylish-panels.webp)
+
+_The available Panels_
+
+![blocks](media/apsj-stylish-blocks.webp)
+
+_The available Blocks_
+
+![elements](media/apsj-stylish-text-menu-prosemirror.webp)
+
+_The available Elements Stylings in Prosemirror_
+
+![elements](media/apsj-stylish-text-menu-tinymce.webp)
+
+_The available Elements Stylings in TinyMCE_
+
+![mix-n-match](media/apsj-mix-n-match.webp)
+
+_An example of Mixing and Matching elements_
