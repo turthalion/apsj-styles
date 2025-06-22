@@ -272,123 +272,6 @@ export class APSJ {
     }
 }
 
-export class APSJMenu extends ProseMirror.ProseMirrorMenu {
-    addElement(htmlString) {
-        const parser = ProseMirror.DOMParser.fromSchema(
-            ProseMirror.defaultSchema
-        );
-
-        const node = ProseMirror.dom.parseString(htmlString);
-        const state = this.view.state;
-        const { $cursor } = state.selection;
-        const tr = state.tr.insert($cursor.pos, node.content);
-        const pos = $cursor.pos;// + node.nodeSize;
-
-        tr.setSelection(ProseMirror.TextSelection.create(tr.doc, pos));
-        this.view.dispatch(tr);
-    }
-
-    _getDropDownMenus() {
-        const menus = super._getDropDownMenus();
-        // menus.format.entries.push({
-        //     action: 'stylishText',
-        //     title: 'Stylish Text',
-        //     children: [
-        //         {
-        //             action: 'stylishTitle',
-        //             title: i18n(
-        //                 'APSJournal.text-heading-title.name'
-        //             ),
-        //             priority: 1,
-        //             style: "font-family: 'Modesto Condensed'",
-        //             node: ProseMirror.defaultSchema.nodes.paragraph,
-        //             cmd: () => {},
-        //         },
-        //         {
-        //             action: 'stylishHeading',
-        //             title: i18n('APSJournal.text-heading.name'),
-        //             priority: 1,
-        //             style: "font-family: 'ScalySansCaps'",
-        //             node: ProseMirror.defaultSchema.nodes.paragraph,
-        //         },
-        //         {
-        //             action: 'stylishDataHeading',
-        //             title: i18n(
-        //                 'APSJournal.text-data-heading.name'
-        //             ),
-        //             priority: 1,
-        //             style: "font-family: 'ScaySansCaps'",
-        //             node: ProseMirror.defaultSchema.nodes.paragraph,
-        //         },
-        //         {
-        //             action: 'stylishData',
-        //             title: i18n('APSJournal.text-data.name'),
-        //             priority: 1,
-        //             style: "font-family: 'ScalySans'",
-        //             node: ProseMirror.defaultSchema.nodes.paragraph,
-        //         },
-        //         {
-        //             action: 'stylishParagraph',
-        //             title: i18n('APSJournal.text-paragraph.name'),
-        //             priority: 1,
-        //             style: "font-family: 'Bookinsanity'",
-        //             node: ProseMirror.defaultSchema.nodes.paragraph,
-        //         },
-        //     ],
-        // });
-
-        menus.stylish = {
-            title: i18n('APSJournal.stylish-menu.name'),
-            entries: [
-                {
-                    action: 'blocks',
-                    title: 'Blocks',
-                    children: APSJ.blockList.map((c) => {
-                        return {
-                            action: `${c}Block`,
-                            title: i18n(`APSJournal.block-${c}.name`),
-                            cmd: async () => {
-                                this.addElement(await APSJ.getBlock(c));
-                            },
-                        };
-                    }),
-                },
-                {
-                    action: 'dialogues',
-                    title: 'Dialogues',
-                    children: APSJ.dialogList.flatMap((c) => {
-                        return ['left', 'right'].map((s) => {
-                            return {
-                                action: `${c}Dialogue${s}`,
-                                title: i18n(
-                                    `APSJournal.block-dialogue-${c}-${s}.name`
-                                ),
-                                cmd: async () => {
-                                    this.addElement(await APSJ.getDialog(c, s));
-                                },
-                            };
-                        });
-                    }),
-                },
-                {
-                    action: 'panels',
-                    title: 'Panels',
-                    children: APSJ.panelList.map((c) => {
-                        return {
-                            action: `${c}Panel`,
-                            title: i18n(`APSJournal.panel-${c}.name`),
-                            cmd: async () => {
-                                this.addElement(await APSJ.getPanel(c));
-                            },
-                        };
-                    }),
-                },
-            ],
-        };
-        return menus;
-    }
-}
-
 Hooks.once("init", async function () {
     APSJ.init();
     const link = document.createElement("link");
@@ -404,15 +287,11 @@ Hooks.once("ready", async function () {
 });
 
 Hooks.on("getProseMirrorMenuDropDowns", (proseMirrorMenu, dropdowns) => {
-  console.log("proseMirror heading attrs:", proseMirrorMenu.schema.nodes.heading.spec.attrs);
-  console.log("proseMirror paragraph attrs:", proseMirrorMenu.schema.nodes.paragraph.spec.attrs);
   const createStyleEntry = (key, config) => {
     const localizedText = i18n(`APSJournal.${config.text}.name`);
 
     // Wrap the localized text in a span with the config class
     const htmlTitle = `<span class="${config.class}">${localizedText}</span>`;
-    console.log("config.class is ", config.class)
-    console.log("htmlTitle is ", htmlTitle)
 
     return {
       title: htmlTitle,
@@ -435,7 +314,7 @@ Hooks.on("getProseMirrorMenuDropDowns", (proseMirrorMenu, dropdowns) => {
   // If the "format" dropdown exists, add our entries to it
   if (dropdowns.format?.entries) {
     dropdowns.format.entries.push({
-      title: i18n("APSJournal.stylish-menu.name"),
+      title: i18n("APSJournal.stylish-text-menu.name"),
       action: "apsjStyles",
       children: Object.entries(APSJ_STYLE_BLOCKS).map(([key, config]) =>
         createStyleEntry(key, config)
