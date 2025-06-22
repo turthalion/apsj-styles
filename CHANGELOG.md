@@ -1,3 +1,7 @@
+# Version 0.2.5
+
+Get stylish menu working in both TinyMCE and ProseMirror.
+
 # Version 0.2.4
 
 Fix string fetching for stylish menu (in TinyMCE).

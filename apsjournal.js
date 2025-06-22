@@ -35,6 +35,14 @@ export const registerSettings = function () {
   });
 }
 
+const APSJ_STYLE_BLOCKS = {
+  apsjTitle: { class: "apsj-title", type: "heading", text: "text-heading-title" },
+  apsjHeading: { class: "apsj-heading", type: "heading", text: "text-heading" },
+  apsjDataHeading: { class: "apsj-data-heading", type: "heading", text: "text-data-heading" },
+  apsjData: { class: "apsj-data", type: "paragraph", text: "text-data" },
+  apsjText: { class: "apsj-text", type: "paragraph", text: "text-paragraph" },
+};
+
 export class APSJ {
     static blockList = [
         'black',
@@ -383,8 +391,55 @@ export class APSJMenu extends ProseMirror.ProseMirrorMenu {
 
 Hooks.once("init", async function () {
     APSJ.init();
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "modules/apsj-styles/styles/apsj.css";
+    document.head.appendChild(link);
+
 });
 
 Hooks.once("ready", async function () {
     APSJ.ready();
+    Hooks.callAll("apsjReady");
+});
+
+Hooks.on("getProseMirrorMenuDropDowns", (proseMirrorMenu, dropdowns) => {
+  console.log("proseMirror heading attrs:", proseMirrorMenu.schema.nodes.heading.spec.attrs);
+  console.log("proseMirror paragraph attrs:", proseMirrorMenu.schema.nodes.paragraph.spec.attrs);
+  const createStyleEntry = (key, config) => {
+    const localizedText = i18n(`APSJournal.${config.text}.name`);
+
+    // Wrap the localized text in a span with the config class
+    const htmlTitle = `<span class="${config.class}">${localizedText}</span>`;
+    console.log("config.class is ", config.class)
+    console.log("htmlTitle is ", htmlTitle)
+
+    return {
+      title: htmlTitle,
+      action: key,
+      node: proseMirrorMenu.schema.nodes[config.type],
+      attrs: { class: config.class },
+      cmd: () => {
+        const { view, schema } = proseMirrorMenu;
+        const type = schema.nodes[config.type];
+        const attrs = {
+          _preserve: { class: config.class },
+          ...(config.level ? { level: config.level } : {}),
+        };
+        const command = foundry.prosemirror.commands.setBlockType(type, attrs);
+        command(view.state, view.dispatch);
+      },
+    };
+  };
+
+  // If the "format" dropdown exists, add our entries to it
+  if (dropdowns.format?.entries) {
+    dropdowns.format.entries.push({
+      title: i18n("APSJournal.stylish-menu.name"),
+      action: "apsjStyles",
+      children: Object.entries(APSJ_STYLE_BLOCKS).map(([key, config]) =>
+        createStyleEntry(key, config)
+      ),
+    });
+  }
 });
