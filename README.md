@@ -30,9 +30,13 @@ Automatic font insertion seems to no longer be supported, at least not in the sa
 
 The new Text Styles can be found under the Style dropdown at the left of the toolbar in the ProseMirror editor.
 
-_The available Elements Stylings in Prosemirror:_
+_The available Elements Stylings:_
 
-![elements-prosemirror](media/apsj-stylish-text-menu-prosemirror.webp)
+![elements-prosemirror](media/apsj-stylish-text-menu.webp)
+
+_The available Stylish blocks, dialogues, and panels menus:_
+
+![elements-prosemirror](media/apsj-stylish-menu.webp)
 
 _The available Panels:_
 
