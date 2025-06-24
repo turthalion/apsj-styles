@@ -16,7 +16,7 @@ This module adds the APSJ Styles from Monk's Enhanced Journal back into the syst
 
 I created this mainly because I'm a heavy user of the read aloud and dialogue styles from Monk's Enhanced Journal, and a lot of my past session notes and journals for upcoming campaigns lost a lot of their oomph with the v13 upgrade.
 
-I don't intend to do much maintenance on this module—my goal was to get the styles working so my existing journal entries would look how they used to. Ideally, this module will become obsolete when Monk's Enhanced Journal is ported to v13.
+My goal was to get the styles working so my existing journal entries would look how they used to. Ideally, this module will become obsolete when Monk's Enhanced Journal is ported to v13.
 
 Automatic font insertion seems to no longer be supported, at least not in the same way. If you want to take advantage of the chosen fonts for panels and blocks, you should install the following fonts (available in [Monk's Enhanced Journal's github repo](https://github.com/ironmonk108/monks-enhanced-journal/tree/main/fonts) or the original [APSJ](https://github.com/AmazingVanish/apsj/tree/main/fonts)) using the following family names in the Foundry UI. I have maintained the same names, spacing, and capitalizations as Monk used:
 
