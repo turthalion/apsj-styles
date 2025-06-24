@@ -1,3 +1,7 @@
+# Version 0.2.7
+
+Add publishing to Foundry website.
+
 # Version 0.2.6
 
 Improve README with examples.
