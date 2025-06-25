@@ -2,7 +2,7 @@
 
 ![Latest Version](https://img.shields.io/badge/dynamic/json.svg?url=https%3A%2F%2Fgithub.com%2Fturthalion%2Fapsj-styles%2Freleases%2Flatest%2Fdownload%2Fmodule.json&label=Latest%20Release&prefix=v&query=$.version&colorB=red&style=for-the-badge)
 ![Foundry Core Compatible Version](https://img.shields.io/badge/dynamic/json.svg?url=https%3A%2F%2Fraw.githubusercontent.com%2Fturthalion%2Fapsj-styles%2Fmain%2Fmodule.json&label=Foundry%20Version&query=$.compatibility.verified&colorB=orange&style=for-the-badge)
-![All Releases Downloads](https://img.shields.io/github/downloads/turthalion/apsj-styles/total?logo=GitHub&style=for-the-badge)) ![Latest Release Downloads](https://img.shields.io/github/downloads/turthalion/apsj-styles/latest/total?logo=GitHub&style=for-the-badge))
+![All Releases Downloads](https://img.shields.io/github/downloads/turthalion/apsj-styles/total?logo=GitHub&style=for-the-badge) ![Latest Release Downloads](https://img.shields.io/github/downloads/turthalion/apsj-styles/latest/total?logo=GitHub&style=for-the-badge)
 
 ## Installation
 
