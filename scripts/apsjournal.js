@@ -21,6 +21,25 @@ export const registerSettings = function () {
     'yellow':  i18n('APSJournal.color-theme-yellow.name')
   };
 
+  let backgroundImages = {
+		'none': "None",
+		'darkParchment': "Parchment - Dark",
+		'parchment': "Parchment - Light",
+		"marbleBlack": "Marble - Black",
+		"marbleWhite": "Marble - White",
+		"metalBrushed": "Metal - Brushed",
+		"paperCotton": "Paper - Cotton",
+		"paperCrumpled": "Paper - Crumpled",
+		"paperCrumpledYellowed": "Paper - Crumpled Yellowed",
+		"paperRecycled": "Paper - Recycled",
+		"paperRice": "Paper - Rice",
+		"solidBlack": "Solid - Black",
+		"solidGrey": "Solid - Grey",
+		"solidWhite": "Solid - White",
+		"woodAlpine": "Wood - Alpine",
+		"woodPine": "Wood - Pine"
+  };
+
   game.settings.register(modulename, 'apsj-theme', {
     name: i18n('APSJournal.apsj-theme.name'),
     hint: i18n('APSJournal.apsj-theme.hint'),
@@ -33,6 +52,21 @@ export const registerSettings = function () {
       document.documentElement.setAttribute("apsj-theme", value);
     },
   });
+
+	game.settings.register(modulename, 'background-image', {
+		name: i18n('APSJournal.background-image.name'),
+		hint: i18n('APSJournal.background-image.hint'),
+		scope: 'client',
+		config: true,
+		default: "none",
+		choices: backgroundImages,
+		type: String,
+		onChange: (value) => {
+      document.documentElement.setAttribute("background-image", value);
+		},
+	});
+
+
 }
 
 const APSJ_STYLE_BLOCKS = {
@@ -98,8 +132,10 @@ export class APSJ {
     static async init() {
         log('Initializing apsj-styles');
         registerSettings();
-        const value = game.settings.get("apsj-styles", "apsj-theme");
+        let value = game.settings.get("apsj-styles", "apsj-theme");
         document.documentElement.setAttribute("apsj-theme", value);
+        value = game.settings.get("apsj-styles", "background-image");
+        document.documentElement.setAttribute("background-image", value);
     }
 
     /**
@@ -327,3 +363,22 @@ Hooks.on("getProseMirrorMenuDropDowns", (proseMirrorMenu, dropdowns) => {
     });
   }
 });
+
+
+Hooks.on("renderJournalSheet", (app, html, data) => {
+  const content = html[0].querySelector(".journal-entry-content");
+  if (!content) return;
+
+  const computed = getComputedStyle(document.documentElement);
+  const bgVar = computed.getPropertyValue("--apsj-background").trim();
+  console.log("Resolved --apsj-background:", bgVar);
+
+  if (!bgVar || bgVar === "none") return; // Do not apply if undefined or set to none
+
+  console.log("apsj renderJournalSheet");
+  content.style.backgroundImage = bgVar;
+  content.style.backgroundSize = "cover";
+  content.style.backgroundRepeat = "repeat";
+  content.style.backgroundPosition = "center center";
+});
+

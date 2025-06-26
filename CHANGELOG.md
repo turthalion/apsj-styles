@@ -1,3 +1,9 @@
+# Version 3.0.0
+
+Add support for choosing page background. Chosen page background applies only to the journal page, not the editing page.
+
+TODO: Choosing certain backgrounds will make default text difficult to see for the time being.
+
 # Version 0.2.10
 
 Use proper touched-up icons for black dialogue box.

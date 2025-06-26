@@ -69,6 +69,10 @@ _An example of Mixing and Matching elements:_
 
 ![mix-n-match](media/apsj-mix-n-match.webp)
 
+_Choosing the journal page background:_
+
+![mix-n-match](media/apsj-styles-settings.webp)
+
 ## Thanks
 
 With kind thanks to Monk and Arius Planewalker for their great modules.

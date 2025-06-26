@@ -77,6 +77,75 @@
     --apsj-btn-background: linear-gradient(rgb(var(--apsj-light-5)), rgb(var(--apsj-light-2)), rgb(var(--apsj-light-5)));
 }
 
+
+/**
+* Background Overrides
+**/
+/*-----------------------------------Page Backgrounds-----------------------------------*/
+html[background-image='none'] {
+    --apsj-background: none;
+}
+
+html[background-image='parchment'] {
+    --apsj-background: url('modules/apsj-styles/assets/apsjournal/parchment.webp');
+}
+
+html[background-image='darkParchment'] {
+    --apsj-background: url('modules/apsj-styles/assets/apsjournal/parchment-medium.webp');
+}
+
+html[background-image='marbleBlack'] {
+    --apsj-background: url('modules/apsj-styles/assets/apsjournal/marble-black.webp');
+}
+
+html[background-image='marbleWhite'] {
+    --apsj-background: url('modules/apsj-styles/assets/apsjournal/marble-white.webp');
+}
+
+html[background-image='metalBrushed'] {
+    --apsj-background: url('modules/apsj-styles/assets/apsjournal/metal-brushed.webp');
+}
+
+html[background-image='paperCotton'] {
+    --apsj-background: url('modules/apsj-styles/assets/apsjournal/paper-cotton.webp');
+}
+
+html[background-image='paperCrumpled'] {
+    --apsj-background: url('modules/apsj-styles/assets/apsjournal/paper-crumpled.webp');
+}
+
+html[background-image='paperCrumpledYellowed'] {
+    --apsj-background: url('modules/apsj-styles/assets/apsjournal/paper-crumpled-yellowed.webp');
+}
+
+html[background-image='paperRecycled'] {
+    --apsj-background: url('modules/apsj-styles/assets/apsjournal/paper-recycled.webp');
+}
+
+html[background-image='paperRice'] {
+    --apsj-background: url('modules/apsj-styles/assets/apsjournal/paper-rice.webp');
+}
+
+html[background-image='solidBlack'] {
+    --apsj-background: url('modules/apsj-styles/assets/apsjournal/solid-black.webp');
+}
+
+html[background-image='solidGrey'] {
+    --apsj-background: url('modules/apsj-styles/assets/apsjournal/solid-grey.webp');
+}
+
+html[background-image='solidWhite'] {
+    --apsj-background: url('modules/apsj-styles/assets/apsjournal/solid-white.webp');
+}
+
+html[background-image='woodAlpine'] {
+    --apsj-background: url('modules/apsj-styles/assets/apsjournal/wood-alpine.webp');
+}
+
+html[background-image='woodPine'] {
+    --apsj-background: url('modules/apsj-styles/assets/apsjournal/wood-pine.webp');
+}
+
 :root[apsj-theme] {
     --apsj-primary-bright: rgb(var(--apsj-primary-color-bright));
     --apsj-primary-light: rgb(var(--apsj-primary-color-light));
