@@ -1,6 +1,6 @@
-# Unreleased
+# Version 0.2.9 
 
-Add support for inserted coloured read-aloud blocks via new submenu.
+Add support for inserting coloured read-aloud blocks via new submenu.
 Original themed colour read-aloud blocks still available via Stylish | Blocks menu.
 Add support for black dialogue box.
 
