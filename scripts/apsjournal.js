@@ -59,6 +59,7 @@ export class APSJ {
         'read-aloud',
     ];
     static dialogList = [
+        'black',
         'blue',
         'cyan',
         'green',
@@ -75,6 +76,16 @@ export class APSJ {
         'note',
         'trap',
         'warning',
+        'blue',
+        'cyan',
+        'green',
+        'orange',
+        'purple',
+        'red',
+        'yellow',
+    ];
+    static readAloudList = [
+        'black',
         'blue',
         'cyan',
         'green',
@@ -182,6 +193,20 @@ export class APSJ {
         );
         return content;
     }
+
+    static async getReadAloud(colour) {
+        let data = {
+            colour: colour,
+            //overlay: colour === 'black' ? 'light-overlay' : colour,
+            body: i18n(`APSJournal.block-read-aloud.body`),
+        };
+
+        let content = await foundry.applications.handlebars.renderTemplate(
+            'modules/apsj-styles/templates/read-aloud-colour.html',
+            data
+        );
+        return content;
+    }
 }
 
 Hooks.once("init", async function () {
@@ -248,6 +273,19 @@ Hooks.on("getProseMirrorMenuDropDowns", (proseMirrorMenu, dropdowns) => {
           action: `panel-${c}`,
           cmd: async () => {
             const html = await APSJ.getPanel(c);
+            insertHTML(proseMirrorMenu.view, html);
+          },
+        })),
+      },
+      {
+        title: "Read Aloud",
+        action: "read-aloud",
+        children: APSJ.readAloudList.map((c) => ({
+          title: i18n(`APSJournal.block-read-aloud-${c}.name`),
+          description: i18n(`APSJournal.block-read-aloud.description`),
+          action: `read-aloud-${c}`,
+          cmd: async () => {
+            const html = await APSJ.getReadAloud(c);
             insertHTML(proseMirrorMenu.view, html);
           },
         })),
