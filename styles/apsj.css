@@ -978,6 +978,28 @@
     box-shadow: 0 3px 15px rgba(var(--apsj-dark-0), 0.75);
 }
 
+.apsj-block.apsj-dialogue.apsj-black {
+    border: 3px solid var(--apsj-black);
+    border-image-slice: 1;
+    border-width: 3px;
+    border-image-source: linear-gradient(to left, var(--apsj-black), var(--apsj-black-dark));
+}
+
+.apsj-icon-right.apsj-black::before {
+    content: url('/modules/apsj-styles/assets/apsjournal/dialogue-icon-right-black.webp');
+}
+
+.apsj-icon-left.apsj-black::before {
+    content: url('/modules/apsj-styles/assets/apsjournal/dialogue-icon-left-black.webp');
+}
+
+.apsj-block.apsj-dialogue.apsj-black .apsj-h2 {
+    border-bottom: 2px solid var(--apsj-black);
+    border-image-slice: 1;
+    border-width: 2px;
+    border-image-source: linear-gradient(to left, var(--apsj-black), var(--apsj-black-dark));
+}
+
 .apsj-block.apsj-dialogue.apsj-blue {
     border: 3px solid var(--apsj-blue);
     border-image-slice: 1;
