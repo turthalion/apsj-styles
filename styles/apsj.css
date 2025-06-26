@@ -34,6 +34,8 @@
   --apsj-dark-1: 17, 17, 17;
   --apsj-dark-0: 0, 0, 0;
   --apsj-accent-1: 255, 153, 0; /* or your preferred highlight color */
+  --apsj-primary-yellow: 215, 215, 0; /* yellow and cyan are different for RA vs non-RA */
+  --apsj-primary-cyan: 0, 255, 255;
   --apsj-font-family: 'Modesto Condensed', 'Palatino Linotype', serif;
 }
 
@@ -791,6 +793,174 @@
     content: '\f4ad';
 }
 
+.apsj-ra-icon-black {
+    float: left;
+    margin: 0 8px 0 -25px;
+}
+
+.apsj-block.apsj-read-aloud-black {
+    border: 2px solid var(--apsj-black);
+    border-radius: 0.5em;
+    background: linear-gradient(rgba(var(--apsj-light-0), 0.75), rgba(var(--apsj-light-4), 0.75));
+    box-shadow: 0 3px 15px rgba(var(--apsj-dark-0), 0.75);
+}
+
+.apsj-ra-icon-black::before {
+    font-family: var(--apsj-font-awesome);
+    font-weight: 900;
+    font-size: xxx-large;
+    color: var(--apsj-black);
+    text-shadow: 1px 1px 2px rgb(var(--apsj-dark-0));
+    content: '\f4ad';
+}
+
+.apsj-ra-icon-blue {
+    float: left;
+    margin: 0 8px 0 -25px;
+}
+
+.apsj-block.apsj-read-aloud-blue {
+    border: 2px solid var(--apsj-blue);
+    border-radius: 0.5em;
+    background: linear-gradient(rgba(var(--apsj-light-0), 0.75), rgba(var(--apsj-light-4), 0.75));
+    box-shadow: 0 3px 15px rgba(var(--apsj-dark-0), 0.75);
+}
+
+.apsj-ra-icon-blue::before {
+    font-family: var(--apsj-font-awesome);
+    font-weight: 900;
+    font-size: xxx-large;
+    color: var(--apsj-blue);
+    text-shadow: 1px 1px 2px rgb(var(--apsj-dark-0));
+    content: '\f4ad';
+}
+
+.apsj-ra-icon-cyan {
+    float: left;
+    margin: 0 8px 0 -25px;
+}
+
+.apsj-block.apsj-read-aloud-cyan {
+    border: 2px solid var(--apsj-cyan);
+    border-radius: 0.5em;
+    background: linear-gradient(rgba(var(--apsj-light-0), 0.75), rgba(var(--apsj-light-4), 0.75));
+    box-shadow: 0 3px 15px rgba(var(--apsj-dark-0), 0.75);
+}
+
+.apsj-ra-icon-cyan::before {
+    font-family: var(--apsj-font-awesome);
+    font-weight: 900;
+    font-size: xxx-large;
+    color: var(--apsj-cyan);
+    text-shadow: 1px 1px 2px rgb(var(--apsj-dark-0));
+    content: '\f4ad';
+}
+
+.apsj-ra-icon-green {
+    float: left;
+    margin: 0 8px 0 -25px;
+}
+
+.apsj-block.apsj-read-aloud-green {
+    border: 2px solid var(--apsj-green);
+    border-radius: 0.5em;
+    background: linear-gradient(rgba(var(--apsj-light-0), 0.75), rgba(var(--apsj-light-4), 0.75));
+    box-shadow: 0 3px 15px rgba(var(--apsj-dark-0), 0.75);
+}
+
+.apsj-ra-icon-green::before {
+    font-family: var(--apsj-font-awesome);
+    font-weight: 900;
+    font-size: xxx-large;
+    color: var(--apsj-green);
+    text-shadow: 1px 1px 2px rgb(var(--apsj-dark-0));
+    content: '\f4ad';
+}
+
+.apsj-ra-icon-orange {
+    float: left;
+    margin: 0 8px 0 -25px;
+}
+
+.apsj-block.apsj-read-aloud-orange {
+    border: 2px solid var(--apsj-orange);
+    border-radius: 0.5em;
+    background: linear-gradient(rgba(var(--apsj-light-0), 0.75), rgba(var(--apsj-light-4), 0.75));
+    box-shadow: 0 3px 15px rgba(var(--apsj-dark-0), 0.75);
+}
+
+.apsj-ra-icon-orange::before {
+    font-family: var(--apsj-font-awesome);
+    font-weight: 900;
+    font-size: xxx-large;
+    color: var(--apsj-orange);
+    text-shadow: 1px 1px 2px rgb(var(--apsj-dark-0));
+    content: '\f4ad';
+}
+
+.apsj-ra-icon-purple {
+    float: left;
+    margin: 0 8px 0 -25px;
+}
+
+.apsj-block.apsj-read-aloud-purple {
+    border: 2px solid var(--apsj-purple);
+    border-radius: 0.5em;
+    background: linear-gradient(rgba(var(--apsj-light-0), 0.75), rgba(var(--apsj-light-4), 0.75));
+    box-shadow: 0 3px 15px rgba(var(--apsj-dark-0), 0.75);
+}
+
+.apsj-ra-icon-purple::before {
+    font-family: var(--apsj-font-awesome);
+    font-weight: 900;
+    font-size: xxx-large;
+    color: var(--apsj-purple);
+    text-shadow: 1px 1px 2px rgb(var(--apsj-dark-0));
+    content: '\f4ad';
+}
+
+.apsj-ra-icon-red {
+    float: left;
+    margin: 0 8px 0 -25px;
+}
+
+.apsj-block.apsj-read-aloud-red {
+    border: 2px solid var(--apsj-red);
+    border-radius: 0.5em;
+    background: linear-gradient(rgba(var(--apsj-light-0), 0.75), rgba(var(--apsj-light-4), 0.75));
+    box-shadow: 0 3px 15px rgba(var(--apsj-dark-0), 0.75);
+}
+
+.apsj-ra-icon-red::before {
+    font-family: var(--apsj-font-awesome);
+    font-weight: 900;
+    font-size: xxx-large;
+    color: var(--apsj-red);
+    text-shadow: 1px 1px 2px rgb(var(--apsj-dark-0));
+    content: '\f4ad';
+}
+
+.apsj-ra-icon-yellow {
+    float: left;
+    margin: 0 8px 0 -25px;
+}
+
+.apsj-block.apsj-read-aloud-yellow {
+    border: 2px solid var(--apsj-yellow);
+    border-radius: 0.5em;
+    background: linear-gradient(rgba(var(--apsj-light-0), 0.75), rgba(var(--apsj-light-4), 0.75));
+    box-shadow: 0 3px 15px rgba(var(--apsj-dark-0), 0.75);
+}
+
+.apsj-ra-icon-yellow::before {
+    font-family: var(--apsj-font-awesome);
+    font-weight: 900;
+    font-size: xxx-large;
+    color: var(--apsj-yellow);
+    text-shadow: 1px 1px 2px rgb(var(--apsj-dark-0));
+    content: '\f4ad';
+}
+
 .apsj-icon-right::before {
     float: right;
     margin: 0 -3.5em 0 0;
@@ -806,6 +976,28 @@
 .apsj-block.apsj-dialogue {
     background: linear-gradient(rgba(var(--apsj-light-0), 0.75), rgba(var(--apsj-light-4), 0.75));
     box-shadow: 0 3px 15px rgba(var(--apsj-dark-0), 0.75);
+}
+
+.apsj-block.apsj-dialogue.apsj-black {
+    border: 3px solid var(--apsj-black);
+    border-image-slice: 1;
+    border-width: 3px;
+    border-image-source: linear-gradient(to left, var(--apsj-black), var(--apsj-black-dark));
+}
+
+.apsj-icon-right.apsj-black::before {
+    content: url('/modules/apsj-styles/assets/apsjournal/dialogue-icon-right-black.webp');
+}
+
+.apsj-icon-left.apsj-black::before {
+    content: url('/modules/apsj-styles/assets/apsjournal/dialogue-icon-left-black.webp');
+}
+
+.apsj-block.apsj-dialogue.apsj-black .apsj-h2 {
+    border-bottom: 2px solid var(--apsj-black);
+    border-image-slice: 1;
+    border-width: 2px;
+    border-image-source: linear-gradient(to left, var(--apsj-black), var(--apsj-black-dark));
 }
 
 .apsj-block.apsj-dialogue.apsj-blue {

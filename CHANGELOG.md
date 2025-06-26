@@ -1,3 +1,9 @@
+# Unreleased
+
+Add support for inserted coloured read-aloud blocks via new submenu.
+Original themed colour read-aloud blocks still available via Stylish | Blocks menu.
+Add support for black dialogue box.
+
 # Version 0.2.8
 
 Get rid of unused insertStyles script.
