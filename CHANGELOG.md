@@ -1,3 +1,8 @@
+# Version 0.2.8
+
+Get rid of unused insertStyles script.
+Move apsjournal.js to scripts directory.
+
 # Version 0.2.7
 
 Add publishing to Foundry website.
