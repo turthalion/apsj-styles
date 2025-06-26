@@ -1,3 +1,7 @@
+# Version 0.2.10
+
+Use proper touched-up icons for black dialogue box.
+
 # Version 0.2.9 
 
 Add support for inserting coloured read-aloud blocks via new submenu.
