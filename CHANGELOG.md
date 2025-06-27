@@ -1,3 +1,7 @@
+# Version 3.0.1
+
+Change default text colour on black backgrounds to ensure visibility ([#2](https://github.com/turthalion/apsj-styles/issues/2))
+
 # Version 3.0.0
 
 Add support for choosing page background. Chosen page background applies only to the journal page, not the editing page.

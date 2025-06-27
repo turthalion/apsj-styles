@@ -146,6 +146,21 @@ html[background-image='woodPine'] {
     --apsj-background: url('modules/apsj-styles/assets/apsjournal/wood-pine.webp');
 }
 
+html[background-image='solidBlack'] .journal-entry-content,
+html[background-image='marbleBlack'] .journal-entry-content {
+    color: rgb(var(--apsj-light-1));
+}
+
+html[background-image='solidBlack'] .journal-header .title,
+html[background-image='marbleBlack'] .journal-header .title {
+    color: rgb(var(--apsj-light-1));
+}
+
+html[background-image='solidBlack'] .editor-edit i,
+html[background-image='marbleBlack'] .editor-edit i {
+    color: rgb(var(--apsj-light-1));
+}
+
 :root[apsj-theme] {
     --apsj-primary-bright: rgb(var(--apsj-primary-color-bright));
     --apsj-primary-light: rgb(var(--apsj-primary-color-light));
