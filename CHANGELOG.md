@@ -1,3 +1,7 @@
+# Version 3.0.2
+
+Don't override GM text blocks on black backgrounds, as they always have their own grey background.
+
 # Version 3.0.1
 
 Change default text colour on black backgrounds to ensure visibility ([#2](https://github.com/turthalion/apsj-styles/issues/2))
