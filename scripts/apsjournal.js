@@ -8,9 +8,18 @@ export let log = (...args) => console.log("apsj-styles | ", ...args);
 
 export const registerSettings = function () {
   // Register any custom module settings here
-  let modulename = "apsj-styles";
+  const modulename = "apsj-styles";
 
-  let apsjThemes = {
+  const fontSizeChoices = {
+    "8pt": i18n('APSJournal.font-size.very-small.name'),
+    "10pt": i18n('APSJournal.font-size.small.name'),
+    "12pt": i18n('APSJournal.font-size.normal.name'),
+    "14pt": i18n('APSJournal.font-size.large.name'),
+    "16pt": i18n('APSJournal.font-size.extra-large.name'),
+    "18pt": i18n('APSJournal.font-size.huge.name'),
+  };
+
+  const apsjThemes = {
     'none': i18n('APSJournal.color-theme-none.name'),
     'blue':  i18n('APSJournal.color-theme-blue.name'),
     'cyan':  i18n('APSJournal.color-theme-cyan.name'),
@@ -21,7 +30,7 @@ export const registerSettings = function () {
     'yellow':  i18n('APSJournal.color-theme-yellow.name')
   };
 
-  let backgroundImages = {
+  const backgroundImages = {
 		'none': "None",
 		'darkParchment': "Parchment - Dark",
 		'parchment': "Parchment - Light",
@@ -66,7 +75,31 @@ export const registerSettings = function () {
 		},
 	});
 
+  game.settings.register("apsj-styles", "apsj-data-font-size", {
+    name: i18n('APSJournal.text-data.font-size.name'),
+    hint: i18n('APSJournal.text-data.font-size.hint'),
+    scope: "client",
+    config: true,
+    type: String,
+    default: "12pt",
+    choices: fontSizeChoices,
+    onChange: value => {
+      document.documentElement.style.setProperty("--apsj-data-font-size", value);
+    }
+  });
 
+  game.settings.register("apsj-styles", "apsj-text-font-size", {
+    name: i18n('APSJournal.text-paragraph.font-size.name'),
+    hint: i18n('APSJournal.text-paragraph.font-size.hint'),
+    scope: "client",
+    config: true,
+    type: String,
+    default: "12pt",
+    choices: fontSizeChoices,
+    onChange: value => {
+      document.documentElement.style.setProperty("--apsj-text-font-size", value);
+    }
+  });
 }
 
 const APSJ_STYLE_BLOCKS = {
@@ -136,6 +169,10 @@ export class APSJ {
         document.documentElement.setAttribute("apsj-theme", value);
         value = game.settings.get("apsj-styles", "background-image");
         document.documentElement.setAttribute("background-image", value);
+        value = game.settings.get("apsj-styles", "apsj-data-font-size");
+        document.documentElement.style.setProperty("--apsj-data-font-size", value);
+        value = game.settings.get("apsj-styles", "apsj-text-font-size");
+        document.documentElement.style.setProperty("--apsj-text-font-size", value);
     }
 
     /**

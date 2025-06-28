@@ -10,9 +10,6 @@ In the setup screen, use the URL https://github.com/turthalion/apsj-styles/relea
 
 ### Usage
 
-As of version 3.0.3, you can now set the default font sizes used for the Stylish Data and Stylish Paragraph styles. Please see [choosing the default
-font size](#choosing-the-default-font-sizes-for-stylish-data-and-stylish-paragraph)
-
 As GM go to the **Manage Modules** options menu in your **World Settings** tab then enable the **APSJ Styles** module.
 
 This module adds the APSJ Styles from Monk's Enhanced Journal back into the system in a v13 friendly way.
@@ -44,40 +41,42 @@ editing the HTML directly. For example, here is a Stylish Data block with a larg
 
 `<p class="apsj-data"><span style="font-size:14pt">Stylish Data</span></p>`
 
+Note that as of version 3.0.3, you can now set the default font sizes used for the Stylish Data and Stylish Paragraph styles. Please see [choosing the default font size](#choosing-the-default-font-sizes-for-stylish-data-and-stylish-paragraph).
+
 ## Media
 
 The new Text Styles can be found under the Stylish Text submenu in the Format menu at the left of the toolbar in the ProseMirror editor.
 
-_The available Elements Stylings:_
+### The available Elements Stylings:
 
 ![element-styles](media/apsj-stylish-text-menu.webp)
 
-_The available Stylish blocks, dialogues, and panels menus:_
+### The available Stylish blocks, dialogues, and panels menus:
 
 ![stylish-menu](media/apsj-stylish-menu.webp)
 
-_The available Panels:_
+### The available Panels:
 
 ![panels](media/apsj-stylish-panels.webp)
 
-_The available Blocks:_
+### The available Blocks
 
 ![blocks](media/apsj-stylish-blocks.webp)
 
-_The available Elements Stylings:_
+### The available Elements Stylings
 
 ![elements](media/apsj-stylish-elements.webp)
 
-_An example of Mixing and Matching elements:_
+### An example of Mixing and Matching elements
 
 ![mix-n-match](media/apsj-mix-n-match.webp)
 
-## Settings
+### Settings
 
-### Choosing the journal page background
+#### Choosing the journal page background
 ![styles-settings](media/apsj-styles-settings.webp)
 
-### Choosing the default font sizes for Stylish Data and Stylish Paragraph
+#### Choosing the default font sizes for Stylish Data and Stylish Paragraph
 
 ![stylish-defaults](media/apsj-stylish-defaults.webp)
 

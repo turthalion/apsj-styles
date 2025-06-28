@@ -1,3 +1,7 @@
+# Version 3.0.3
+
+Add support for setting the default font sizes for Stylish Data and Stylish Paragraph blocks.
+
 # Version 3.0.2
 
 Don't override GM text blocks on black backgrounds, as they always have their own grey background.

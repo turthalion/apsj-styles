@@ -262,13 +262,13 @@ html[background-image='marbleBlack'] .editor-edit i {
 .apsj-data {
     font-family: var(--apsj-font-scalysans);
     font-weight: 300;
-    font-size: 1em;
+    font-size: var(--apsj-data-font-size);
 }
 
 .apsj-text {
     font-family: var(--apsj-font-bookinsanity);
     font-weight: 400;
-    font-size: 1em;
+    font-size: var(--apsj-text-font-size);
 }
 
 .sheet.journal-entry .journal-entry-page header.journal-page-header h1 {

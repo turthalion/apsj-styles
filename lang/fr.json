@@ -26,6 +26,18 @@
   "APSJournal.text-data.name": "Données stylisées",
   "APSJournal.text-paragraph.name": "Paragraphe stylisé",
 
+  "APSJournal.text-data.font-size.name": "Taille de police pour Données stylisées",
+  "APSJournal.text-data.font-size.hint": "Définit la taille de police par défaut pour Données stylisées",
+  "APSJournal.text-paragraph.font-size.name": "Taille de police pour Paragraphe stylisé",
+  "APSJournal.text-paragraph.font-size.hint": "Définit taille de police par défaut pour Paragraphe stylisé",
+
+  "APSJournal.font-size.very-small.name": "8 pt (Très petit)",
+  "APSJournal.font-size.small.name": "10 pt (Petit)",
+  "APSJournal.font-size.normal.name": "12 pt (Normal)",
+  "APSJournal.font-size.large.name": "14 pt (Grand)",
+  "APSJournal.font-size.extra-large.name": "16 pt (Très grand)",
+  "APSJournal.font-size.huge.name": "18 pt (Énorme)",
+
   "APSJournal.block.heading": "Objet: Nom",
   "APSJournal.block.description": "Description",
   "APSJournal.block.stats": "Stats",

@@ -22,6 +22,18 @@
   "APSJournal.text-data.name": "Stylish Data",
   "APSJournal.text-paragraph.name": "Stylish Paragraph",
 
+  "APSJournal.text-data.font-size.name": "Stylish Data Font Size",
+  "APSJournal.text-data.font-size.hint": "Sets the default font size for Stylish Data",
+  "APSJournal.text-paragraph.font-size.name": "Stylish Paragraph Font Size",
+  "APSJournal.text-paragraph.font-size.hint": "Sets the default font size for Stylish Paragraph",
+
+  "APSJournal.font-size.very-small.name": "8 pt (Very Small)",
+  "APSJournal.font-size.small.name": "10 pt (Small)",
+  "APSJournal.font-size.normal.name": "12 pt (Normal)",
+  "APSJournal.font-size.large.name": "14 pt (Large)",
+  "APSJournal.font-size.extra-large.name": "16 pt (Extra Large)",
+  "APSJournal.font-size.huge.name": "18 pt (Huge)",
+
   "APSJournal.block.heading": "Item: Name",
   "APSJournal.block.description": "Description",
   "APSJournal.block.stats": "Stats",
