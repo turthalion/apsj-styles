@@ -1,3 +1,7 @@
+# Version 3.0.4
+
+Restore V12 functionality as per mxzf suggestion ([#4](https://github.com/turthalion/apsj-styles/issues/4))
+
 # Version 3.0.3
 
 Add support for setting the default font sizes for Stylish Data and Stylish Paragraph blocks.
