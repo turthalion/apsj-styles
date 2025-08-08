@@ -7,9 +7,7 @@
     "scripts/apsjournal.js"
   ],
   "styles": [
-    {
-      "src": "styles/apsj.css"
-    }
+    "styles/apsj.css"
   ],
   "compatibility": {
     "minimum": 12,
