@@ -1,3 +1,7 @@
+# Version 3.0.5
+
+Use proper font-weight for apsj-data to match recommended ScalyScans install (allows bolding of apsj-data to work properly)
+
 # Version 3.0.4
 
 Restore V12 functionality as per mxzf suggestion ([#4](https://github.com/turthalion/apsj-styles/issues/4))
