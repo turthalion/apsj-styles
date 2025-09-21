@@ -167,7 +167,7 @@ html[background-image='marbleBlack'] .editor-edit i {
 /* Force all text inside GM visibility blocks to a readable dark color */
 [data-visibility="gm"],
 [data-visibility="gm"] * {
-  color: #302f2c !important;
+  color: #444444 !important;
 }
 
 :root[apsj-theme] {

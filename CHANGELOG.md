@@ -1,3 +1,6 @@
+# Version 3.0.6
+Use proper PF2e GM text colour (#444444) for GM blocks instead of our own funky one
+
 # Version 3.0.5
 
 Use proper font-weight for apsj-data to match recommended ScalyScans install (allows bolding of apsj-data to work properly)
