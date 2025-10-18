@@ -408,11 +408,9 @@ Hooks.on("renderJournalSheet", (app, html, data) => {
 
   const computed = getComputedStyle(document.documentElement);
   const bgVar = computed.getPropertyValue("--apsj-background").trim();
-  console.log("Resolved --apsj-background:", bgVar);
 
   if (!bgVar || bgVar === "none") return; // Do not apply if undefined or set to none
 
-  console.log("apsj renderJournalSheet");
   content.style.backgroundImage = bgVar;
   content.style.backgroundSize = "cover";
   content.style.backgroundRepeat = "repeat";
