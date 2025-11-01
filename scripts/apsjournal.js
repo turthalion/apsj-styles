@@ -6,9 +6,10 @@ export let format = (key, data = {}) => {
 };
 export let log = (...args) => console.log("apsj-styles | ", ...args);
 
+export const modulename = "apsj-styles";
+
 export const registerSettings = function () {
   // Register any custom module settings here
-  const modulename = "apsj-styles";
 
   const fontSizeChoices = {
     "8pt": i18n('APSJournal.font-size.very-small.name'),
@@ -31,22 +32,22 @@ export const registerSettings = function () {
   };
 
   const backgroundImages = {
-		'none': "None",
-		'darkParchment': "Parchment - Dark",
-		'parchment': "Parchment - Light",
-		"marbleBlack": "Marble - Black",
-		"marbleWhite": "Marble - White",
-		"metalBrushed": "Metal - Brushed",
-		"paperCotton": "Paper - Cotton",
-		"paperCrumpled": "Paper - Crumpled",
-		"paperCrumpledYellowed": "Paper - Crumpled Yellowed",
-		"paperRecycled": "Paper - Recycled",
-		"paperRice": "Paper - Rice",
-		"solidBlack": "Solid - Black",
-		"solidGrey": "Solid - Grey",
-		"solidWhite": "Solid - White",
-		"woodAlpine": "Wood - Alpine",
-		"woodPine": "Wood - Pine"
+    'none': "None",
+    'darkParchment': "Parchment - Dark",
+    'parchment': "Parchment - Light",
+    "marbleBlack": "Marble - Black",
+    "marbleWhite": "Marble - White",
+    "metalBrushed": "Metal - Brushed",
+    "paperCotton": "Paper - Cotton",
+    "paperCrumpled": "Paper - Crumpled",
+    "paperCrumpledYellowed": "Paper - Crumpled Yellowed",
+    "paperRecycled": "Paper - Recycled",
+    "paperRice": "Paper - Rice",
+    "solidBlack": "Solid - Black",
+    "solidGrey": "Solid - Grey",
+    "solidWhite": "Solid - White",
+    "woodAlpine": "Wood - Alpine",
+    "woodPine": "Wood - Pine"
   };
 
   game.settings.register(modulename, 'apsj-theme', {
@@ -62,18 +63,39 @@ export const registerSettings = function () {
     },
   });
 
-	game.settings.register(modulename, 'background-image', {
-		name: i18n('APSJournal.background-image.name'),
-		hint: i18n('APSJournal.background-image.hint'),
-		scope: 'client',
-		config: true,
-		default: "none",
-		choices: backgroundImages,
-		type: String,
-		onChange: (value) => {
-      document.documentElement.setAttribute("background-image", value);
-		},
-	});
+  game.settings.register(modulename, 'background-image', {
+    name: i18n('APSJournal.background-image.name'),
+    hint: i18n('APSJournal.background-image.hint'),
+    scope: 'client',
+    config: true,
+    default: "none",
+    choices: backgroundImages,
+    type: String,
+    onChange: applyBackground, // updates all clients automatically
+  });
+
+  // --- WORLD SETTING (GM only)
+  game.settings.register(modulename, "world-background-image", {
+    name: "World Page Background",
+    hint: "Set the default background for all users who choose to use the world background.",
+    scope: 'world',
+    config: true,
+    type: String,
+    choices: backgroundImages,
+    default: "none",
+    onChange: applyBackground, // updates all clients automatically
+  });
+
+  // --- CLIENT SETTINGS (user-specific)
+  game.settings.register(modulename, "use-world-background", {
+    name: "Use World Background",
+    hint: "If enabled, uses the GM’s world background instead of your own choice.",
+    scope: "client",
+    config: true,
+    type: Boolean,
+    default: false,
+    onChange: applyBackground,
+  });
 
   game.settings.register("apsj-styles", "apsj-data-font-size", {
     name: i18n('APSJournal.text-data.font-size.name'),
@@ -299,7 +321,17 @@ function insertHTML(view, htmlString) {
   view.dispatch(transaction);
 }
 
+function applyBackground() {
+  const useWorld = game.settings.get(modulename, "use-world-background");
+  const bg = useWorld
+    ? game.settings.get(modulename, "world-background-image")
+    : game.settings.get(modulename, "background-image");
+
+  document.documentElement.setAttribute("background-image", bg);
+}
+
 Hooks.once("ready", async function () {
+    applyBackground();
     Hooks.callAll("apsjReady");
 });
 
