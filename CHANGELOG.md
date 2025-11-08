@@ -1,3 +1,6 @@
+# Version 3.0.8
+Add compatibility warning when Monk's Enhanced Journal is enabled.
+
 # Version 3.0.7
 Make page background a per-world setting.
 

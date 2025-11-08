@@ -16,6 +16,8 @@
   "APSJournal.color-theme-red.name": "Rosso",
   "APSJournal.color-theme-yellow.name": "Giallo",
 
+  "APSJournal.conflict.message": ""APSJ Styles" è in conflitto con "Monk's Enhanced Journal". La sovrapposizione di stili CSS e classi JavaScript potrebbe causare problemi. Disattivare uno dei moduli per evitare problemi.",
+
   "APSJournal.stylish-menu.name": "Stilizzato",
   "APSJournal.stylish-text-menu.name": "Testo stilizzato",
   "APSJournal.text-heading-title.name": "Intestazione stilizzata (Titolo)",

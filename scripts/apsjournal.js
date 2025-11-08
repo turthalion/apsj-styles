@@ -333,6 +333,14 @@ function applyBackground() {
 Hooks.once("ready", async function () {
     applyBackground();
     Hooks.callAll("apsjReady");
+
+  // Check if the conflicting module is active
+  if (game.modules.get("monks-enhanced-journal")?.active) {
+    const message = i18n("APSJournal.conflict.message");
+
+    // Show a visible notification in Foundry UI
+    ui.notifications.warn(message);
+  }
 });
 
 

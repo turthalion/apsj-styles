@@ -14,6 +14,8 @@
   "APSJournal.color-theme-red.name": "Red",
   "APSJournal.color-theme-yellow.name": "Yellow",
 
+  "APSJournal.conflict.message": "APSJ Styles conflicts with Monk's Enhanced Journal. Overlapping CSS styles and JavaScript classes may cause issues. Disable one of the modules to avoid problems.",
+
   "APSJournal.stylish-menu.name": "Stylish",
   "APSJournal.stylish-text-menu.name": "Stylish Text",
   "APSJournal.text-heading-title.name": "Stylish Heading (Title)",
