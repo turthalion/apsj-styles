@@ -78,6 +78,7 @@ The new Text Styles can be found under the Stylish Text submenu in the Format me
 
 #### Selecting the world or user background
 ![styles-backgrounds](media/apsj-styles-backgrounds.webp)
+
 Users can choose to globally their own selected background for journal pages, or adhere to whatever journal background the GM has chosen for this world.  
 The GM has the option to set the world's journal page background.
 
