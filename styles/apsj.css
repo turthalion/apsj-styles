@@ -67,7 +67,6 @@
     --apsj-purple-dark: rgb(64, 0, 153);
     --apsj-black-dark: rgb(0, 0, 0);
 
-    --apsj-font-awesome: 'Font Awesome 6 Pro';
     --apsj-font-bookinsanity: 'Bookinsanity', serif;
     --apsj-font-mreaves: 'MrEaves', serif;
     --apsj-font-scalysans: 'ScalySans', sans-serif;
@@ -878,7 +877,7 @@ html[background-image='marbleBlack'] .editor-edit i {
 }
 
 .apsj-ra-icon::before {
-    font-family: var(--apsj-font-awesome);
+    font-family: var(--font-awesome);
     font-weight: 900;
     font-size: xxx-large;
     color: var(--apsj-primary);
@@ -899,7 +898,7 @@ html[background-image='marbleBlack'] .editor-edit i {
 }
 
 .apsj-ra-icon-black::before {
-    font-family: var(--apsj-font-awesome);
+    font-family: var(--font-awesome);
     font-weight: 900;
     font-size: xxx-large;
     color: var(--apsj-black);
@@ -920,7 +919,7 @@ html[background-image='marbleBlack'] .editor-edit i {
 }
 
 .apsj-ra-icon-blue::before {
-    font-family: var(--apsj-font-awesome);
+    font-family: var(--font-awesome);
     font-weight: 900;
     font-size: xxx-large;
     color: var(--apsj-blue);
@@ -941,7 +940,7 @@ html[background-image='marbleBlack'] .editor-edit i {
 }
 
 .apsj-ra-icon-cyan::before {
-    font-family: var(--apsj-font-awesome);
+    font-family: var(--font-awesome);
     font-weight: 900;
     font-size: xxx-large;
     color: var(--apsj-cyan);
@@ -962,7 +961,7 @@ html[background-image='marbleBlack'] .editor-edit i {
 }
 
 .apsj-ra-icon-green::before {
-    font-family: var(--apsj-font-awesome);
+    font-family: var(--font-awesome);
     font-weight: 900;
     font-size: xxx-large;
     color: var(--apsj-green);
@@ -983,7 +982,7 @@ html[background-image='marbleBlack'] .editor-edit i {
 }
 
 .apsj-ra-icon-orange::before {
-    font-family: var(--apsj-font-awesome);
+    font-family: var(--font-awesome);
     font-weight: 900;
     font-size: xxx-large;
     color: var(--apsj-orange);
@@ -1004,7 +1003,7 @@ html[background-image='marbleBlack'] .editor-edit i {
 }
 
 .apsj-ra-icon-purple::before {
-    font-family: var(--apsj-font-awesome);
+    font-family: var(--font-awesome);
     font-weight: 900;
     font-size: xxx-large;
     color: var(--apsj-purple);
@@ -1025,7 +1024,7 @@ html[background-image='marbleBlack'] .editor-edit i {
 }
 
 .apsj-ra-icon-red::before {
-    font-family: var(--apsj-font-awesome);
+    font-family: var(--font-awesome);
     font-weight: 900;
     font-size: xxx-large;
     color: var(--apsj-red);
@@ -1046,7 +1045,7 @@ html[background-image='marbleBlack'] .editor-edit i {
 }
 
 .apsj-ra-icon-yellow::before {
-    font-family: var(--apsj-font-awesome);
+    font-family: var(--font-awesome);
     font-weight: 900;
     font-size: xxx-large;
     color: var(--apsj-yellow);

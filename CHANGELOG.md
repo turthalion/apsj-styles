@@ -1,3 +1,7 @@
+# Version 4.0.0
+Add support for ApplicationV2 journal backgrounds.
+Add support for Foundry v14.
+
 # Version 3.0.8
 Add compatibility warning when Monk's Enhanced Journal is enabled.
 

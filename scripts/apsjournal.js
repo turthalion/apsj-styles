@@ -441,7 +441,6 @@ Hooks.on("getProseMirrorMenuDropDowns", (proseMirrorMenu, dropdowns) => {
   }
 });
 
-
 Hooks.on("renderJournalSheet", (app, html, data) => {
   const content = html[0].querySelector(".journal-entry-content");
   if (!content) return;
@@ -457,3 +456,33 @@ Hooks.on("renderJournalSheet", (app, html, data) => {
   content.style.backgroundPosition = "center center";
 });
 
+Hooks.on("renderApplicationV2", (app, html) => {
+  // We only care about the ProseMirror journal *page* sheet
+  if (!app.constructor.name.startsWith("JournalEntry")) return;
+
+  // Skip edit mode
+  if (app.options?.editable) return;
+
+  const root = html; // html is already the root element
+  if (!(root instanceof HTMLElement)) return;
+
+  const content =
+    root.querySelector(".journal-entry-content");
+
+  if (!content) return;
+
+  const bg = getComputedStyle(document.documentElement)
+    .getPropertyValue("--apsj-background")
+    .trim();
+
+  if (!bg || bg === "none") return;
+
+  // Prevent reapplication on rerender
+  if (content.dataset.apsjBackgroundApplied) return;
+  content.dataset.apsjBackgroundApplied = "true";
+
+  content.style.backgroundImage = bg;
+  content.style.backgroundSize = "auto";
+  content.style.backgroundRepeat = "repeat";
+  content.style.backgroundPosition = "center center";
+});
